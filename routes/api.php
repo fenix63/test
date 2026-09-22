@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ReferalController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,5 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/ping', fn () => ['ok' => true]);
 
 // TODO: POST /api/referrals/attach
+Route::post('/referrals/attach', [ReferalController::class, 'attach']);
+
 // TODO: GET  /api/referrals/my
 // TODO: GET  /api/referrals/earnings
